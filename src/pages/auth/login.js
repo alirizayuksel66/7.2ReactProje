@@ -12,7 +12,12 @@ export default function Login() {
             id: 1,
             usename: 'Ali Rıza Yüksel'
         })
-        navigate('/')
+        navigate(location?.return_url || '/',{
+            replace: true,
+            state: {
+                name: 'Ali Rıza Yüksel'
+            }
+        })
     }
 
     return (
